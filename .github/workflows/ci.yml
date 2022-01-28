@@ -22,7 +22,7 @@ jobs:
         run: |
           gh release delete nightly --yes || true
           git push origin :nightly || true
-          gh release create nightly --prerelease --title "Nightly" --target $GITHUB_SHA motch
+          gh release create nightly --prerelease --title "Nightly" --target $GITHUB_SHA mctl
 
       - if: startsWith(github.ref, 'refs/tags/')
         run: echo "TAG_NAME=${{ github.ref_name }}" >> $GITHUB_ENV
@@ -32,4 +32,8 @@ jobs:
         env:
           GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
         run: |
-          gh release create $TAG_NAME --title "$TAG_NAME" --target $GITHUB_SHA motch
+          gh release create $TAG_NAME --title "$TAG_NAME" --target $GITHUB_SHA mctl
+
+      - if: startsWith(github.ref, 'refs/tags/')
+        run: |
+          echo "TAG_NAME=${{ github.ref_name }}" >> $GITHUB_ENV
