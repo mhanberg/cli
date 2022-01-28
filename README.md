@@ -1,6 +1,6 @@
-# motch cli
+# mctl
 
-Welcome to the motch cli.
+Welcome to the mctl, the motch control, or me control.
 
 ## Installation
 

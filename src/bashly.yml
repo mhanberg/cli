@@ -1,11 +1,13 @@
-name: motch
-help: The motch cli
+name: mctl
+help: me control
 version: 0.1.0-alpha.2
 
 commands:
 - name: demo
   short: d
   help: Prints the demo program
+  dependencies:
+  - figlet
 
   examples:
-  - motch demo
+  - mctl demo
