@@ -1,0 +1,11 @@
+name: motch
+help: The motch cli
+version: 0.1.0
+
+commands:
+- name: demo
+  short: d
+  help: Prints the demo program
+
+  examples:
+  - motch demo
