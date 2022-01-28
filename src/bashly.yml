@@ -1,6 +1,6 @@
 name: mctl
 help: me control
-version: 0.1.0-alpha.2
+version: 0.1.0-alpha.3
 
 commands:
 - name: demo
